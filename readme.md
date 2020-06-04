@@ -41,7 +41,7 @@ class SomeModelName
 
 ```php
 
-<?php echo common\modules\faq\backend\widgets\FaqFieldWidget::widget([
+<?php echo \common\modules\faq\backend\widgets\FaqFieldWidget::widget([
   'form' => $form,
   'model' => $model
 ]); ?>
@@ -52,7 +52,7 @@ class SomeModelName
 
 ```php
 
-    <?php echo common\modules\faq\frontend\widgets\FaqWidget::widget([
+    <?php echo \common\modules\faq\frontend\widgets\FaqWidget::widget([
       'header' => 'Заголовок',
       'model' => $model,
     ])
