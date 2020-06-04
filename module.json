@@ -1,0 +1,5 @@
+{
+  "id" : "faq",
+  "version" : "0.1",
+  "migrationPath" : "@common/modules/faq/console/migrations"
+}
