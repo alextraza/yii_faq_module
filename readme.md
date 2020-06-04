@@ -60,3 +60,34 @@ class SomeModelName
 ```
 
 где $model - экземпляр модели с привязанными вопросами
+
+## Дополнительно
+
+индексная страница будет требовать \common\actions\ChangePosAction, если он еще не был добавлен.
+
+```php
+<?php
+
+namespace common\actions;
+
+use Yii;
+use yii\helpers\StringHelper;
+
+class ChangePosAction extends AttributeAction
+{
+    public $mess;
+
+    public function run($id)
+    {
+        $pos = Yii::$app->request->post('pos');
+
+        $model = $this->findModel($id);
+
+        $model->{$this->attribute} = $pos;
+        $model->update();
+
+        return $this->formatResponse(['success' => StringHelper::truncate(strip_tags($model->{$this->mess}), 25)]);
+    }
+}
+
+```
