@@ -16,7 +16,7 @@
 ```php
 <?php 
 
-use common\modules\faq\common\components;
+use common\modules\faq\common\components\FaqTrait;
 
 class SomeModelName
 {
